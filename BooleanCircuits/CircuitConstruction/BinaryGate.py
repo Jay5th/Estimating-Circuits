@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from BinaryOperation import BinaryOperation
+from BooleanCircuits.CircuitConstruction.BinaryOperation import BinaryOperation
 
 
 @dataclass(frozen=True)

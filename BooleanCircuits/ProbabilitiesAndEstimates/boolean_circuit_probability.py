@@ -1,5 +1,5 @@
-from binary_sequences import binary_sequences
-from BooleanCircuits.BooleanCircuit import BooleanCircuit
+from BooleanCircuits.ProbabilitiesAndEstimates.binary_sequences import binary_sequences
+from BooleanCircuits.CircuitConstruction.BooleanCircuit import BooleanCircuit
 
 
 def boolean_circuit_probability(boolean_circuit: BooleanCircuit) -> float:

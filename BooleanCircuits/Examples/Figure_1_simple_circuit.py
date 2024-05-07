@@ -1,8 +1,8 @@
-from BooleanCircuits.BooleanCircuit import BooleanCircuit
-from BooleanCircuits.BinaryGate import BinaryGate
-from BooleanCircuits.BinaryOperation import BinaryOperation
-from BooleanCircuits.boolean_circuit_probability import boolean_circuit_probability as bool_prob
-from BooleanCircuits.simple_estimator import simple_estimate
+from BooleanCircuits.CircuitConstruction.BooleanCircuit import BooleanCircuit
+from BooleanCircuits.CircuitConstruction.BinaryGate import BinaryGate
+from BooleanCircuits.CircuitConstruction.BinaryOperation import BinaryOperation
+from BooleanCircuits.ProbabilitiesAndEstimates.boolean_circuit_probability import boolean_circuit_probability as bool_prob
+from BooleanCircuits.ProbabilitiesAndEstimates.simple_estimator import simple_estimate
 
 or_op = BinaryOperation(name='or')
 and_op = BinaryOperation(name='and')

@@ -1,5 +1,5 @@
-from BooleanCircuits.BooleanCircuit import BooleanCircuit
-from BooleanCircuits.BinaryGate import BinaryGate
+from BooleanCircuits.CircuitConstruction.BooleanCircuit import BooleanCircuit
+from BooleanCircuits.CircuitConstruction.BinaryGate import BinaryGate
 
 estimate_operations = {'zero': lambda a, b: 0,
                        'one': lambda a, b: 1,
