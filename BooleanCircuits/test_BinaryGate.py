@@ -1,6 +1,6 @@
 import unittest
-from BinaryGate import BinaryGate
-from BinaryOperation import BinaryOperation
+from BooleanCircuits.BinaryGate import BinaryGate
+from BooleanCircuits.BinaryOperation import BinaryOperation
 
 
 class TestBinaryGate(unittest.TestCase):

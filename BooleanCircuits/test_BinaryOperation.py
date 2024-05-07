@@ -1,5 +1,5 @@
 import unittest
-from BinaryOperation import BinaryOperation
+from BooleanCircuits.BinaryOperation import BinaryOperation
 
 
 class TestBinaryOperation(unittest.TestCase):
