@@ -6,7 +6,7 @@ from Visualizations.HelperFunctions.normalized_vector import normalized_vector
 
 class BinaryWire:
     def __init__(self, canvas: tk.Canvas, start_node: BinaryNode or InputNode, end_node: BinaryNode,
-                 color_off: str = 'black', color_on: str = 'yellow'):
+                 color_off: str = 'black', color_on: str = 'aqua'):
         self.canvas = canvas
         self.start_node = start_node
         self.end_node = end_node
