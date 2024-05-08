@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, order=True)
 class CircuitVariable:
-    name: str
     rank: int
-
+    name: str
+    
     def __str__(self):
         return self.name
 
