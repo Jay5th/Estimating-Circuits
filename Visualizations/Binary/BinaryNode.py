@@ -4,7 +4,7 @@ from BooleanCircuits.CircuitConstruction.BinaryGate import BinaryGate
 
 class BinaryNode:
     def __init__(self, canvas: tk.Canvas, gate: BinaryGate, x: int, y: int, radius: int, color_off: str = 'gray',
-                 color_on: str = 'yellow'):
+                 color_on: str = 'aqua'):
         self.canvas = canvas
         self.gate = gate
         self.node_id = canvas.create_oval(x - radius, y - radius, x + radius, y + radius, fill=color_off)
@@ -23,6 +23,7 @@ class BinaryNode:
     def activate(self, data_input: tuple):
         self.output = self.gate(data_input)
         self.canvas.itemconfigure(self.node_id, fill=self.colors[self.output])
+        return self.output
 
     def deactivate(self):
         self.output = self.gate.operation(0, 0)

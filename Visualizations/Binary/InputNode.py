@@ -3,7 +3,7 @@ import tkinter as tk
 
 class InputNode:
     def __init__(self, canvas: tk.Canvas, input_index: int, x: int, y: int, radius: int, color_off: str = 'gray',
-                 color_on: str = 'yellow'):
+                 color_on: str = 'aqua'):
         self.canvas = canvas
         self.input_index = input_index
         self.node_id = canvas.create_oval(x - radius, y - radius, x + radius, y + radius, fill=color_off)
@@ -22,6 +22,7 @@ class InputNode:
     def activate(self, data_input: tuple):
         self.output = data_input[self.input_index]
         self.canvas.itemconfigure(self.node_id, fill=self.colors[self.output])
+        return self.output
 
     def deactivate(self):
         self.output = 0
