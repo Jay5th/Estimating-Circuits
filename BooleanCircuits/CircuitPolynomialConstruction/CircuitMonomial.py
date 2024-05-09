@@ -25,6 +25,6 @@ class CircuitMonomial:
     def __mul__(self, other):
         if (self.coefficient == 0) or (other.coefficient == 0):
             return CircuitMonomial(coefficient=0, variables=[])
-        combined_variables = list(set(self.variables) | set(other.variables))
+        combined_variables = list(set(self.variables + other.variables))
         return CircuitMonomial(coefficient=self.coefficient * other.coefficient,
                                variables=combined_variables)
