@@ -4,9 +4,9 @@ from dataclasses import dataclass
 @dataclass(order=True)
 class CircuitMonomial:
     variables: list
-    coefficient: int
+    coefficient: int or float
 
-    def __init__(self, variables: list, coefficient: int):
+    def __init__(self, variables: list, coefficient: int or float):
         self.variables = sorted(variables, key=lambda a: a.rank)
         self.coefficient = coefficient
 
@@ -17,6 +17,8 @@ class CircuitMonomial:
             return str(self.coefficient)
         if self.coefficient == 1:
             return "*".join([str(var) for var in self.variables])
+        if self.coefficient == -1:
+            return "-" + "*".join([str(var) for var in self.variables])
         return str(self.coefficient) + "*".join([str(var) for var in self.variables])
 
     def __repr__(self):
