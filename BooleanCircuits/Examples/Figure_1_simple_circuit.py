@@ -27,7 +27,8 @@ gate_layers.append(layer2)
 
 simple_boolean_circuit = BooleanCircuit(input_size=3, gate_layers=gate_layers)
 
-data_input = (1, 1, 0)
-print(f"{data_input} -> C ->", simple_boolean_circuit(data_input))
-print("P(C) =", bool_prob(simple_boolean_circuit))
-print("simple E(C) =", simple_estimate(simple_boolean_circuit))
+if __name__ == '__main__':
+    data_input = (1, 1, 0)
+    print(f"{data_input} -> C ->", simple_boolean_circuit(data_input))
+    print("P(C) =", bool_prob(simple_boolean_circuit))
+    print("simple E(C) =", simple_estimate(simple_boolean_circuit))
