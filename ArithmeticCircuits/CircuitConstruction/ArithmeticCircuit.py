@@ -5,6 +5,7 @@ from ArithmeticCircuits.CircuitConstruction.ArithmeticGate import ArithmeticGate
 @dataclass
 class ArithmeticCircuit:
     gate_layers: list[list[ArithmeticGate]]
+    input_size: int
 
     def pass_through_layer(self, data_input: tuple[float, ...], layer_index: int) -> tuple[float, ...]:
         layer = self.gate_layers[layer_index]
