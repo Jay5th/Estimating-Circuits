@@ -10,7 +10,6 @@ available_options = {'zero': lambda a, b: 0,
 @dataclass(frozen=True)
 class BinaryOperation:
     name: str = 'zero'
-    assert name in available_options.keys(), f"I have not implemented a binary operation named {name}."
 
     def __call__(self, a: int, b: int) -> int:
         return available_options[self.name](a, b)
