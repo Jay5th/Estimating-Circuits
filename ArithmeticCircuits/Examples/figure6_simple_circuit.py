@@ -3,6 +3,7 @@ from ArithmeticCircuits.CircuitConstruction.ArithmeticGate import ArithmeticGate
 from ArithmeticCircuits.CircuitConstruction.ArithmeticCircuit import ArithmeticCircuit
 from ArithmeticCircuits.ProbabilitiesAndEstimates.mean_propagation import mean_propagation
 from ArithmeticCircuits.ProbabilitiesAndEstimates.arithmetic_circuit_probability import circuit_sample_mean_gaussian
+from ArithmeticCircuits.ProbabilitiesAndEstimates.covariance_propagation import covariance_propagation
 
 c1 = ArithmeticOperation(name="constant=1")
 add_op = ArithmeticOperation(name="sum")
@@ -31,6 +32,7 @@ if __name__ == '__main__':
     data_input = (1, 0, 0)
     print(f"{data_input} -> C ->", simple_arithmetic_circuit(data_input))
     print("mean propagation: E(C) ~", mean_propagation(circuit=simple_arithmetic_circuit))
+    print("covariance propagation: E(C) ~", covariance_propagation(circuit=simple_arithmetic_circuit))
     sample_size = 2000
     print(f"mean via sampling (sample size = {sample_size}): E(C) ~",
           circuit_sample_mean_gaussian(circuit=simple_arithmetic_circuit, sample_size=sample_size))
